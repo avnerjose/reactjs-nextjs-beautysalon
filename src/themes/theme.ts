@@ -14,6 +14,23 @@ const theme = extendTheme({
       2: "#FFFFFF",
     },
   },
+  components: {
+    Heading: {
+      baseStyle: {
+        fontWeight: "bold",
+        color: "dark",
+      },
+    },
+    Text: {
+      baseStyle: {
+        color: "gray.dark",
+      },
+    },
+  },
+  fonts: {
+    heading: "Poppins, sans-serif",
+    body: "DM Sans, sans-serif",
+  },
 });
 
 export { theme };
