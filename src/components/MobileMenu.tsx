@@ -31,6 +31,8 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
       <Stack alignItems="center">
         {links.map(({ title, to }) => (
           <Link
+            className="link"
+            activeClass="active-link"
             onClick={onClose}
             to={to}
             key={title}

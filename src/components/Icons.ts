@@ -9,4 +9,7 @@ export {
   FiYoutube as YoutubeIcon,
 } from "react-icons/fi";
 export { BiMap as MapIcon, BiMenuAltRight as MenuIcon } from "react-icons/bi";
-export { AiOutlineClose as CloseIcon } from "react-icons/ai";
+export {
+  AiOutlineClose as CloseIcon,
+  AiOutlineArrowUp as UpArrowIcon,
+} from "react-icons/ai";

@@ -8,7 +8,7 @@ const slideFromLeft: Variants = {
       delay: i ? 0.5 : 0,
     },
   }),
-  hidden: { x: "-50vh", opacity: 0 },
+  hidden: { x: "-10vh", opacity: 0 },
 };
 
 const slideFromRight: Variants = {
@@ -19,17 +19,17 @@ const slideFromRight: Variants = {
       delay: i ? 0.5 : 0,
     },
   }),
-  hidden: { x: "50vh", opacity: 0 },
+  hidden: { x: "10vh", opacity: 0 },
 };
 
 const slideFromTop: Variants = {
   visible: { y: "0", opacity: 1 },
-  hidden: { y: "50vh", opacity: 0 },
+  hidden: { y: "10vh", opacity: 0 },
 };
 
 const slideFromBottom: Variants = {
   visible: { y: "0", opacity: 1 },
-  hidden: { y: "-50vh", opacity: 0 },
+  hidden: { y: "-10vh", opacity: 0 },
 };
 
 const parent: Variants = {
@@ -43,9 +43,9 @@ const parent: Variants = {
 };
 
 const child: Variants = {
-  hidden: { x: "-100vh", opacity: 0 },
+  hidden: { y: "-10vh", opacity: 0 },
   visible: (i) => ({
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       delay: i * 0.3,

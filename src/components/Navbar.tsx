@@ -27,9 +27,10 @@ export function Navbar({ handleOpenMobileMenu }: NavbarProps) {
       as="header"
       bg={isNavbarTransparent ? "background.2" : "background.1"}
       justify="center"
-      h="3rem"
       position="fixed"
-      inset="0 0 0 0"
+      top="0"
+      right="0"
+      left="0"
       zIndex="10"
     >
       <Flex
@@ -38,7 +39,7 @@ export function Navbar({ handleOpenMobileMenu }: NavbarProps) {
         w="100%"
         maxW="container.lg"
         px={["1rem", "1rem", "1rem", "0"]}
-        p="1.5rem"
+
         align="center"
         justify="space-between"
       >
@@ -47,6 +48,7 @@ export function Navbar({ handleOpenMobileMenu }: NavbarProps) {
           {links.map(({ title, to }) => (
             <Link
               activeClass="active-link"
+              className="link"
               to={to}
               key={title}
               offset={-50}
@@ -54,7 +56,7 @@ export function Navbar({ handleOpenMobileMenu }: NavbarProps) {
               duration={500}
               spy={true}
             >
-              <Box cursor="pointer" px="1rem" py="0.5rem" color="dark">
+              <Box cursor="pointer" px="1rem" py="1.2rem" color="dark">
                 {title}
               </Box>
             </Link>

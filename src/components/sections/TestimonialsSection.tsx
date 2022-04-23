@@ -9,7 +9,7 @@ import { testimonials } from "../../mocks";
 import { slideFromBottom } from "../../animations";
 
 export function TestimonialsSection() {
-  const { ref, controls } = useInViewAnimation();
+  const { ref, controls, inView } = useInViewAnimation();
   return (
     <Flex
       id="testimonials"
@@ -27,24 +27,28 @@ export function TestimonialsSection() {
         justify="center"
         p={["1rem", "1rem", "1rem", "0 "]}
       >
-        <Heading
-          maxW="500px"
-          as={motion.h2}
-          animate={controls}
-          initial="hidden"
-          variants={slideFromBottom}
-          textAlign="center"
-          mb="2rem"
-        >
-          Depoimentos de quem já passou por aqui
-        </Heading>
-        <Slider>
-          {testimonials.map((item) => (
-            <SwiperSlide key={item.author}>
-              <TestimonialItem testimonial={item} />
-            </SwiperSlide>
-          ))}
-        </Slider>
+        {inView && (
+          <>
+            <Heading
+              maxW="500px"
+              as={motion.h2}
+              animate={controls}
+              initial="hidden"
+              variants={slideFromBottom}
+              textAlign="center"
+              mb="2rem"
+            >
+              Depoimentos de quem já passou por aqui
+            </Heading>
+            <Slider>
+              {testimonials.map((item) => (
+                <SwiperSlide key={item.author}>
+                  <TestimonialItem testimonial={item} />
+                </SwiperSlide>
+              ))}
+            </Slider>
+          </>
+        )}
       </Flex>
     </Flex>
   );
