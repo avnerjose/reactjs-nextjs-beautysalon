@@ -69,4 +69,27 @@ const contactItems = [
   },
 ];
 
-export { testimonials, services, contactItems };
+const links = [
+  {
+    title: "Início",
+    to: "hero",
+  },
+  {
+    title: "Sobre",
+    to: "about",
+  },
+  {
+    title: "Serviços",
+    to: "services",
+  },
+  {
+    title: "Depoimentos",
+    to: "testimonials",
+  },
+  {
+    title: "Contato",
+    to: "contact",
+  },
+];
+
+export { testimonials, services, contactItems, links   };

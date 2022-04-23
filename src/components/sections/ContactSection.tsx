@@ -66,7 +66,7 @@ export function ContactSection() {
 
             <Stack
               gap="2rem"
-              alignItems="flex-end"
+              alignItems={["flex-start", "flex-start", "flex-end"]}
               as={motion.div}
               animate={controls}
               initial="hidden"

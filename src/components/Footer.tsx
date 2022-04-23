@@ -15,11 +15,11 @@ export function Footer() {
         px={["1rem", "1rem", "1rem", "0"]}
       >
         <Stack>
-          <Image src="/logo_white.svg" alt="Beauty Salon" />
+          <Image src="/logo_white.svg" alt="Beauty Salon" maxW="250px" />
           <Text color="white">@{new Date().getFullYear()} BeautySalon</Text>
           <Text color="white">Todos os direitos reservados.</Text>
         </Stack>
-        <HStack color="white" mt={["2rem", "2rem", "0"]}>
+        <HStack color="white" mt={["2rem", "2rem", "0"]} fontSize="1.2rem">
           <Icon as={InstagramIcon} />
           <Icon as={FacebookIcon} />
           <Icon as={YoutubeIcon} />

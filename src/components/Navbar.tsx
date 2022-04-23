@@ -1,32 +1,14 @@
-import { Box, Flex, HStack, Image } from "@chakra-ui/react";
+import { Box, Flex, HStack, IconButton, Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { links } from "../mocks";
+import { MenuIcon } from "./Icons";
 
+type NavbarProps = {
+  handleOpenMobileMenu: () => void;
+};
 
-const links = [
-  {
-    title: "Início",
-    to: "hero",
-  },
-  {
-    title: "Sobre",
-    to: "about",
-  },
-  {
-    title: "Serviços",
-    to: "services",
-  },
-  {
-    title: "Depoimentos",
-    to: "testimonials",
-  },
-  {
-    title: "Contato",
-    to: "contact",
-  },
-];
-
-export function Navbar() {
+export function Navbar({ handleOpenMobileMenu }: NavbarProps) {
   const [isNavbarTransparent, setIsNavbarTransparent] = useState(false);
 
   const handleNavbarScrollColor = () => {
@@ -61,7 +43,7 @@ export function Navbar() {
         justify="space-between"
       >
         <Image src="/logo_green.svg" alt="Beauty Salon" w="160px" h="20px" />
-        <HStack>
+        <HStack display={["none", "none", "flex"]}>
           {links.map(({ title, to }) => (
             <Link
               activeClass="active-link"
@@ -78,6 +60,15 @@ export function Navbar() {
             </Link>
           ))}
         </HStack>
+        <IconButton
+          display={["flex", "flex", "none"]}
+          aria-label="menu"
+          onClick={handleOpenMobileMenu}
+          icon={<MenuIcon />}
+          background="transparent"
+          color="primary"
+          fontSize="1.5rem"
+        />
       </Flex>
     </Flex>
   );

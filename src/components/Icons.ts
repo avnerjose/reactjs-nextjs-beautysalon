@@ -8,5 +8,5 @@ export {
   FiInstagram as InstagramIcon,
   FiYoutube as YoutubeIcon,
 } from "react-icons/fi";
-
-export { BiMap as MapIcon } from "react-icons/bi";
+export { BiMap as MapIcon, BiMenuAltRight as MenuIcon } from "react-icons/bi";
+export { AiOutlineClose as CloseIcon } from "react-icons/ai";
