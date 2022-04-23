@@ -1,0 +1,12 @@
+.swiper-pagination-bullet-active {
+  background: #69b99d;
+}
+
+.active-link {
+  border-bottom: 2px solid #69b99d;
+}
+
+.active-link div {
+  color: #69b99d;
+  font-weight: bold;
+}
